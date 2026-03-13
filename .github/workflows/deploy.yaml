@@ -41,7 +41,7 @@ jobs:
           username: root
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           source: |
-            build/libs/*SNAPSHOT.jar
+            target/*SNAPSHOT.jar
           target: /root/app/
           
       # deploy 스크립트 파일을 퍼블릭 서버로 전달
