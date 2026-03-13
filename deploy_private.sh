@@ -20,7 +20,8 @@ ssh -o StrictHostKeyChecking=no $PRIVATE_USER@$PRIVATE_HOST "mkdir -p /root/app"
 scp -o StrictHostKeyChecking=no /root/app/target/*.jar $PRIVATE_USER@$PRIVATE_HOST:/root/app/app.jar
 
 # 애플리케이션을 백그라운드에서 실행하고 로그는 app.log에 저장
-ssh -o StrictHostKeyChecking=no $PRIVATE_USER@$PRIVATE_HOST "nohup java -jar /root/app/app.jar > /root/app/app.log 2>&1 &"
+ssh -o StrictHostKeyChecking=no $PRIVATE_USER@$PRIVATE_HOST "nohup java -jar /root/app/app.jar \
+--spring.config.location=/home/config/application.properties > /root/app/app.log 2>&1 &"
 
 # 추가 배포 작업이 필요한 경우 실행
 ssh -o StrictHostKeyChecking=no $PRIVATE_USER@$PRIVATE_HOST "bash < /root/deploy.sh"

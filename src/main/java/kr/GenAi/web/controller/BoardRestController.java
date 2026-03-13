@@ -19,7 +19,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
 @RequestMapping("/api/board")
-@CrossOrigin(origins = "http://127.0.0.1:5500", allowedHeaders = "*")
+// @CrossOrigin(origins = "http://127.0.0.1:5500", allowedHeaders = "*") 
+@CrossOrigin(origins = "http://10.1.1.6", allowedHeaders = "*") // 비동기통신 공인서버의 사설 IP입력
 public class BoardRestController {
 	
 	@Autowired
