@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Private 서버 정보 ---
-PRIVATE_HOST=""          # 실제 Private 서버 IP
+PRIVATE_HOST="10.1.2.6"          # 실제 Private 서버 IP
 PRIVATE_USER="root"                 # Private 서버 계정
 PRIVATE_KEY="/root/.ssh/id_rsa"     # Public 서버에서 Private 서버 접속용 키
 
